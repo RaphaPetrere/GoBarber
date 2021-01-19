@@ -4,7 +4,7 @@
 It's a [NodeJS](https://nodejs.org/en/) *API REST*, making it easy to use multiple clients and being a performance oriented application.
 
 ### First things first
-*DO NOT* forget to run `npm install` when downloading this project, so you can have node_modules folder and it'll run smoothly. 
+**DO NOT** forget to run `npm install` when downloading this project, so you can have node_modules folder and it'll run smoothly. 
 
 I'd also recommend to run `yarn install`, _just in case._
 
@@ -19,8 +19,11 @@ I'd also recommend to run `yarn install`, _just in case._
 * UUID
 > Library used to create an universal unique ID, so we can set an id for each entry.
 
+* CORS
+> We use CORS so our backend allows any frontend have access to our backend (if its params are empty).
+
 ## Frontend
-Focused on components, the frontend is a React application.
+Component oriented, the frontend is a ReactJS application.
 
 ### Concepts used on Frontend
 * Components
@@ -47,3 +50,10 @@ Focused on components, the frontend is a React application.
 
 * WEBPACK-DEV-SERVER
 > Live Reload development server from webpack (just like a nodemon on the backend). You can see it working by running `yarn webpack serve --mode development` if you are using webpack 4+.
+
+* AXIOS
+> Responsible for the API Request, it connects the frontend with the backend.
+
+### Errors and its turnarounds
+- #### regeneratorRuntime is not defined
+> Babel itself with the _preset-env_ doesn't understand async functions, so we need to add another plugin called **plugin-transform-runtime** by running `@babel/plugin-transform-runtime`. By doing so, you need to restart the server and then it won't be a problem anymore.

@@ -19,7 +19,21 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                 }
-            }
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: [
+                    { loader: 'style-loader' }, //It'll take the transpiled css and will inject into the HTML
+                    { loader: 'css-loader' }, //Read the css file and understands its imports
+                ]
+            },
+            {
+                test: /.*\.(gif|png|jpe?g)$/i, //testing more than 1 extension //i makes it case-insensitive
+                use: [
+                    { loader: 'file-loader' },
+                ]
+            },
         ]
     }
 };
