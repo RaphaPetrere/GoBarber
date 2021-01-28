@@ -57,3 +57,10 @@ Component oriented, the frontend is a ReactJS application.
 ### Errors and its turnarounds
 - #### regeneratorRuntime is not defined
 > Babel itself with the _preset-env_ doesn't understand async functions, so we need to add another plugin called **plugin-transform-runtime** by running `@babel/plugin-transform-runtime`. By doing so, you need to restart the server and then it won't be a problem anymore.
+
+## Mobile
+Component oriented, the frontend is a React Native application.
+
+### Quick concepts
+- It doesn't have semantic neither own style.
+- All components are _display: flex_ by its nature and there's no inherit on others styles. You **must** create an style to each component.
