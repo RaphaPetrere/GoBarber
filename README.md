@@ -64,3 +64,10 @@ Component oriented, the frontend is a React Native application.
 ### Quick concepts
 - It doesn't have semantic neither own style.
 - All components are _display: flex_ by its nature and there's no inherit on others styles. You **must** create an style to each component.
+
+## TypeScript
+Adding type to JS, it helps your productivity and workflow.
+
+> For organizing purposes, we will be uncommenting and changing the values from the following line: `"outDir": "./dist"` so everytime we run `yarn tsc` it'll create the **index.js** on the **/dist** folder.
+
+> You can't run `node dist/index.ts` since it won't recognize this type of file. What you need to do is create a **tsconfig** file, just like babel's by running `yarn tsc --init`. After that, it'll create a **index.js** file that will contain its code, but transpiled to **es5**. With that index.js, you can finally run `node dist/index.js` and will have it working smoothly fine.
