@@ -1,4 +1,4 @@
-# GoBarber
+# GoStack - conceitos
 
 ## Backend
 It's a [NodeJS](https://nodejs.org/en/) *API REST*, making it easy to use multiple clients and being a performance oriented application.
