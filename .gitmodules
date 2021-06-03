@@ -1,0 +1,12 @@
+[submodule "desafio-node-1"]
+	path = desafio-node-1
+	url = https://github.com/RaphaPetrere/desafio-node-1
+[submodule "desafio-node-2"]
+	path = desafio-node-2
+	url = https://github.com/RaphaPetrere/desafio-node-2
+[submodule "desafio-react-1"]
+	path = desafio-react-1
+	url = https://github.com/RaphaPetrere/desafio-react-1
+[submodule "desafio-reactnative-1"]
+	path = desafio-reactnative-1
+	url = https://github.com/RaphaPetrere/desafio-reactnative-1
