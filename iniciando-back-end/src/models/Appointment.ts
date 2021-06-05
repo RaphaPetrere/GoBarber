@@ -1,22 +1,23 @@
-import { v4 as uuid } from 'uuid';
+import { Column, PrimaryGeneratedColumn, Entity } from 'typeorm';
 
-interface AppointmentConstructor {
-    provider: string;
-    date: Date;
-}
+/*
+    Utilizando o Decorator "@", ele funciona como se fosse uma função.
+    Ele pega a função Entity e passa a classe como um parametro.
+    Toda vez que nossa model Appointment for salva, ela será salva na tabela.
+    Graças a Entity, o constructor é criado de forma automatica, 
+    então n é necessário.
+*/
 
+@Entity('appointments')
 class Appointment {
+    @PrimaryGeneratedColumn('uuid')
     id: string;
 
+    @Column('varchar')
     provider: string;
 
+    @Column('timestamp with time zone')
     date: Date;
-
-    constructor({ provider, date }: Omit<Appointment, 'id'>) {
-        this.id = uuid();
-        this.provider = provider;
-        this.date = date;
-    }
 }
 
 export default Appointment;
