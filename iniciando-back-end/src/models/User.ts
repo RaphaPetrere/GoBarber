@@ -3,9 +3,7 @@ import {
     PrimaryGeneratedColumn, 
     Entity, 
     CreateDateColumn, 
-    UpdateDateColumn, 
-    ManyToOne,
-    JoinColumn,
+    UpdateDateColumn 
 } from 'typeorm';
 
 /*
@@ -16,22 +14,19 @@ import {
     então n é necessário.
 */
 
-import User from './User';
-
-@Entity('appointments')
-class Appointment {
+@Entity('users')
+class User {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
     @Column('varchar')
-    provider_id: string;
-    
-    @ManyToOne(() => User) //Função que retorna qual model deve ser utilizada quando for chamada.
-    @JoinColumn({name: 'provider_id'}) //Coluna que vai identificar o prestador desse serviço.
-    provider: User;
+    name: string;
 
-    @Column('timestamp with time zone')
-    date: Date;
+    @Column('varchar')
+    email: string;
+    
+    @Column('varchar')
+    password: string;
 
     @CreateDateColumn()
     created_at: Date;
@@ -40,4 +35,4 @@ class Appointment {
     updated_at: Date;
 }
 
-export default Appointment;
+export default User;
